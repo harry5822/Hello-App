@@ -5,14 +5,7 @@ public class App {
         if (args.length == 0) {
             greeting = "Hello, World!";
         } else {
-            StringBuilder nameBuilder = new StringBuilder();
-
-            for (String name : args) {
-                nameBuilder.append(name).append(", ");
-            }
-
-            String names = nameBuilder.substring(0, nameBuilder.length() - 2);
-            greeting = "Hello, " + names + "!";
+            greeting = "Hello, " + String.join(", ", args) + "!";
         }
 
         System.out.println(greeting);
